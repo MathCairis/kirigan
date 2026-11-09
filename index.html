@@ -12,7 +12,9 @@
   <header class="navbar">
     <div class="container nav-container">
       <div class="logo">
-        <h1>KIRIGAN</h1>
+        <a href="index.html">
+          <img src="src/images/logo.png" alt="Kirigan Logo" class="logo-img-header">
+        </a>
       </div>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
         <span></span>
@@ -25,12 +27,23 @@
   <!-- Side Menu (Menu Lateral) -->
   <div class="side-menu-overlay" id="sideMenuOverlay"></div>
   <aside class="side-menu" id="sideMenu">
-    <button class="menu-close" id="menuClose" aria-label="Fechar Menu">&times;</button>
+    <div class="side-menu-header">
+      <img src="src/images/emblema.png" alt="Emblema Kirigan" class="side-menu-emblem">
+      <button class="menu-close" id="menuClose" aria-label="Fechar Menu">&times;</button>
+    </div>
     <nav class="side-nav">
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="produtos.html">Produtos</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
+        <li class="has-submenu">
+          <a href="#" class="submenu-toggle">Sobre <span class="arrow">▼</span></a>
+          <ul class="submenu">
+            <li><a href="termos-e-condicoes.html">Termos e Condições</a></li>
+            <li><a href="politica-de-reembolso.html">Política de Reembolso</a></li>
+            <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+            <li><a href="politica-de-envio.html">Política de Envio</a></li>
+          </ul>
+        </li>
         <li><a href="contato.html">Contato</a></li>
         <li><a href="cadastre-se.html">Cadastre-se</a></li>
         <li><a href="login.html">Login</a></li>
@@ -45,7 +58,10 @@
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="sub-brand">KIRIGAN</span>
+      <div class="hero-brand-stack">
+        <img src="src/images/logo.png" alt="Kirigan Logo" class="hero-logo-top">
+        <img src="src/images/emblema.png" alt="Emblema Kirigan" class="hero-emblem">
+      </div>
       <h2>PROTEÇÃO FORJADA<br>PARA GRANDES BATALHAS</h2>
     </div>
   </section>
@@ -165,7 +181,6 @@
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="contato.html">Contato</a></li>
           <li><a href="cadastre-se.html">Cadastre-se</a></li>
           <li><a href="login.html">Login</a></li>
@@ -173,14 +188,12 @@
       </div>
 
       <div class="footer-col">
-        <h4>Políticas</h4>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Termos e Condições</a></li>
-          <li><a href="#">Política de Reembolso</a></li>
-          <li><a href="#">Política de Privacidade</a></li>
-          <li><a href="#">Política de Envio</a></li>
-          <li><a href="#">Declaração de Acessibilidade</a></li>
+        <h4>Sobre</h4>
+        <ul class="footer-submenu">
+          <li><a href="termos-e-condicoes.html">Termos e Condições</a></li>
+          <li><a href="politica-de-reembolso.html">Política de Reembolso</a></li>
+          <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="politica-de-envio.html">Política de Envio</a></li>
         </ul>
       </div>
 
@@ -194,7 +207,7 @@
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; 2026 por Kirigan Acessórios. Criado com Wix Studio / Custom Design.</p>
+      <p>&copy; 2026 por Kirigan Acessórios.</p>
     </div>
   </footer>
 
