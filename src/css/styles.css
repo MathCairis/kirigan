@@ -253,7 +253,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(160, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 80%);
 }
 
 .hero-content {
@@ -632,18 +631,38 @@ body {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 900px) {
-  .about-grid, .cards-grid, .footer-grid {
+@media (max-width: 770px) {
+
+  .about-grid,
+  .cards-grid,
+  .footer-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .hero-content h2 {
     font-size: 2rem;
   }
-  
+
   .stats-grid {
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
+  }
+
+  .logo-img-header {
+    height: 45px;
+    max-width: 65vw;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .register-card-box {
+    padding: 20px;
   }
 }
 
@@ -784,7 +803,7 @@ body {
   .form-row {
     grid-template-columns: 1fr;
   }
-  
+
   .form-group.full-width {
     grid-column: span 1;
   }
