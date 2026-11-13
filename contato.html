@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIRIGAN - Contato e Orçamento</title>
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="src/images/logo.png" alt="Kirigan Logo" class="logo-img-header">
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Side Menu (Menu Lateral) -->
+  <div class="side-menu-overlay" id="sideMenuOverlay"></div>
+  <aside class="side-menu" id="sideMenu">
+    <div class="side-menu-header">
+      <img src="src/images/emblema.png" alt="Emblema Kirigan" class="side-menu-emblem">
+      <button class="menu-close" id="menuClose" aria-label="Fechar Menu">&times;</button>
+    </div>
+    <nav class="side-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html?produto=dual-matte">Produtos</a></li>
+        <li class="has-submenu">
+          <a href="#" class="submenu-toggle">Sobre <span class="arrow">▼</span></a>
+          <ul class="submenu">
+            <li><a href="termos-e-condicoes.html">Termos e Condições</a></li>
+            <li><a href="politica-de-reembolso.html">Política de Reembolso</a></li>
+            <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+            <li><a href="politica-de-envio.html">Política de Envio</a></li>
+          </ul>
+        </li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="cadastre-se.html">Cadastre-se</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Contact Section -->
+  <main class="register-section">
+    <div class="container">
+      <div class="register-card-box contact-card-box">
+        
+        <div class="register-card-header">
+          <h2>Contato e Orçamento</h2>
+          <div class="red-line"></div>
+          <p>Fale diretamente conosco ou monte seu pedido preenchendo os dados abaixo</p>
+        </div>
+
+        <!-- Botões de Contato Direto (WhatsApp e Instagram) -->
+        <div class="direct-contact-bar">
+          <a href="https://wa.me/553187849663?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20produtos%20Kirigan." target="_blank" class="direct-btn whatsapp-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+            WhatsApp (31) 8784-9663
+          </a>
+          <a href="https://www.instagram.com/kirigan.acessorios/" target="_blank" class="direct-btn instagram-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram @kirigan.acessorios
+          </a>
+        </div>
+
+        <form class="register-form" id="contactForm" novalidate>
+          
+          <div class="form-group full-width">
+            <label for="nome">Nome / Razão Social</label>
+            <div class="input-wrapper">
+              <input type="text" id="nome" placeholder="Digite seu nome ou da empresa" required>
+              <span class="input-icon">🏢</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cnpj">CNPJ / CPF (Opcional)</label>
+              <div class="input-wrapper">
+                <input type="text" id="cnpj" maxlength="18" placeholder="00.000.000/0000-00">
+                <span class="input-icon">📄</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <div class="input-wrapper">
+                <input type="email" id="email" placeholder="seu@email.com" required>
+                <span class="input-icon">✉️</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="responsavel">Nome do Contato</label>
+              <div class="input-wrapper">
+                <input type="text" id="responsavel" placeholder="Seu nome completo" required>
+                <span class="input-icon">👤</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <div class="input-wrapper">
+                <input type="tel" id="telefone" maxlength="15" placeholder="(00) 00000-0000" required>
+                <span class="input-icon">📞</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seletor Interativo de Produtos para Orçamento -->
+          <div class="form-group full-width product-selector-box">
+            <label>Monte seu Pedido / Produtos de Interesse</label>
+            <p class="selector-subtext">Selecione o produto, a quantidade desejada e clique em "Adicionar" para incluir na descrição do pedido.</p>
+            
+            <div class="product-picker-row">
+              <select id="productSelect" class="custom-picker-select">
+                <option value="Sleeves Dual Matte Kirigan c/100 unidades">Sleeves Dual Matte Kirigan c/100 unidades</option>
+                <option value="Perfect Fit Kirigan c/100 unidades">Perfect Fit Kirigan c/100 unidades</option>
+                <option value="Outer Sleeves Kirigan c/100 unidades">Outer Sleeves Kirigan c/100 unidades</option>
+              </select>
+              <input type="number" id="productQtyInput" value="1" min="1" max="999" class="custom-picker-qty">
+              <button type="button" id="addProductBtn" class="btn-secondary add-item-btn">Adicionar</button>
+            </div>
+          </div>
+
+          <!-- Caixa de Texto com a Descrição do Pedido -->
+          <div class="form-group full-width">
+            <label for="descricaoPedido">Descrição / Detalhes do Pedido</label>
+            <div class="input-wrapper">
+              <textarea id="descricaoPedido" rows="5" placeholder="Os produtos adicionados aparecerão aqui automaticamente. Você também pode digitar observações ou cores desejadas..." required></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-main full-btn">
+              <span>✓</span> Enviar Pedido / Orçamento
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      
+      <div class="footer-col">
+        <h4>Local</h4>
+        <p>Contagem - MG, 32015-530, Brasil</p>
+        <p>Rua Vereador Dico Diniz, 400 - Linda Vista</p>
+        <p>email@marqui.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html?produto=dual-matte">Produtos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="cadastre-se.html">Cadastre-se</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sobre</h4>
+        <ul class="footer-submenu">
+          <li><a href="termos-e-condicoes.html">Termos e Condições</a></li>
+          <li><a href="politica-de-reembolso.html">Política de Reembolso</a></li>
+          <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="politica-de-envio.html">Política de Envio</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Redes sociais</h4>
+        <div class="footer-social-badges">
+          <a href="https://wa.me/553187849663?text=Olá,%20gostaria%20de%20mais%20informações." target="_blank" class="footer-badge-btn footer-badge-whatsapp" aria-label="WhatsApp">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://www.instagram.com/kirigan.acessorios/" target="_blank" class="footer-badge-btn footer-badge-instagram" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Esta div fica fora do grid, ocupando 100% da largura e centralizada -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 por Kirigan Acessórios.</p>
+    </div>
+  </footer>
+
+  <script src="src/script/script.js"></script>
+</body>
+</html>

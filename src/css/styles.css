@@ -572,8 +572,15 @@ body {
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
+  margin-top: 30px;
   border-top: 1px solid #111111;
   font-size: 0.75rem;
+  width: 100%;
+}
+
+.footer-bottom p {
+  width: 100%;
+  text-align: center;
 }
 
 /* PÁGINAS JURÍDICAS / INSTITUCIONAIS */
@@ -811,4 +818,584 @@ body {
   .register-card-box {
     padding: 20px;
   }
+}
+
+/* =========================================================
+   ESTILOS COMPLETOS DA PÁGINA DE PRODUTOS
+========================================================= */
+.product-page-section {
+  padding: 40px 0 80px 0;
+  background-color: #0d0d0d;
+}
+
+.product-breadcrumb-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 0.85rem;
+}
+
+.nav-product-link {
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-product-link:hover,
+.nav-product-link.active-red {
+  color: #e50914;
+}
+
+.nav-divider {
+  color: #333333;
+}
+
+/* Grid Principal do Produto */
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 45px;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+/* Galeria Esquerda */
+.product-main-stage {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  background-color: #141414;
+  border: 1px solid #222222;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-main-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s, transform 0.2s;
+  z-index: 5;
+}
+
+.gallery-arrow:hover {
+  background-color: #e50914;
+  color: #ffffff;
+}
+
+.gallery-arrow.prev {
+  left: 15px;
+}
+
+.gallery-arrow.next {
+  right: 15px;
+}
+
+.product-thumbs-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.product-thumb-item {
+  width: 56px;
+  height: 56px;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: all 0.25s ease;
+  background-color: #1a1a1a;
+}
+
+.product-thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-thumb-item.active,
+.product-thumb-item:hover {
+  opacity: 1;
+  border-color: #e50914;
+}
+
+/* Coluna Direita: Informações */
+.product-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  color: #dddddd;
+  margin-bottom: 22px;
+}
+
+.product-option-group {
+  margin-bottom: 20px;
+}
+
+.option-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  margin-bottom: 8px;
+}
+
+.selected-color-text {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Bolinhas de Cores (Swatches) */
+.color-swatches {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.color-swatch:hover {
+  transform: scale(1.15);
+}
+
+.color-swatch.active {
+  border-color: #e50914;
+  box-shadow: 0 0 0 2px #0d0d0d, 0 0 0 4px #e50914;
+}
+
+/* Controle de Quantidade */
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 38px;
+}
+
+.qty-control button {
+  width: 34px;
+  height: 100%;
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.qty-control button:hover {
+  background-color: #e6e6e6;
+}
+
+.qty-control input {
+  width: 44px;
+  height: 100%;
+  border: none;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #000000;
+  background: transparent;
+}
+
+/* Botões de Ação */
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.btn-cart,
+.btn-buy {
+  width: 100%;
+  padding: 13px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+.btn-quote-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-cart {
+  background-color: #3a3a40;
+  color: #ffffff;
+}
+
+.btn-cart:hover {
+  background-color: #4d4d55;
+}
+
+.btn-buy {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-buy:hover {
+  background-color: #e50914;
+  color: #ffffff;
+}
+
+/* Compartilhamento */
+.product-share {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.product-share a {
+  color: #cccccc;
+  transition: color 0.25s;
+  display: flex;
+  align-items: center;
+}
+
+.product-share a:hover {
+  color: #e50914;
+}
+
+/* Caixa de Descrição com Borda Vermelha (Igual ao modelo) */
+.product-description-box {
+  background-color: #161618;
+  border: 1px solid #80090e;
+  border-radius: 8px;
+  padding: 35px 40px;
+  margin-bottom: 55px;
+}
+
+.product-description-box h2 {
+  font-size: 1.35rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.description-content {
+  color: #cccccc;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.description-content.collapsed {
+  max-height: 175px;
+  position: relative;
+}
+
+.description-content.collapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background: linear-gradient(transparent, #161618);
+  pointer-events: none;
+}
+
+.description-content h3 {
+  font-size: 0.95rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.description-content p {
+  margin-bottom: 12px;
+}
+
+.description-content ul {
+  margin-left: 18px;
+  margin-bottom: 15px;
+}
+
+.description-content ul li {
+  margin-bottom: 8px;
+}
+
+.btn-show-more {
+  background: none;
+  border: none;
+  color: #e50914;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.btn-show-more:hover {
+  color: #ff2a35;
+  text-decoration: underline;
+}
+
+/* Produtos Relacionados (Inferior) */
+.related-products-section {
+  margin-top: 20px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 300px));
+  gap: 30px;
+}
+
+.related-card {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-4px);
+}
+
+.related-card-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #161618;
+  border: 1px solid #261113;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.related-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.related-card h4 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.related-card span {
+  color: #888888;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 770px) {
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .product-main-stage {
+    height: 320px;
+  }
+
+  .product-description-box {
+    padding: 25px 20px;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+/* =========================================================
+   ESTILOS ESPECÍFICOS DA PÁGINA DE CONTATO
+========================================================= */
+.contact-card-box {
+  max-width: 850px !important;
+}
+
+.direct-contact-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.direct-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: opacity 0.2s, transform 0.2s;
+  color: #ffffff;
+}
+
+.direct-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+}
+
+.instagram-btn {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.product-selector-box {
+  background-color: #161618;
+  border: 1px solid #26262a;
+  border-radius: 6px;
+  padding: 18px;
+}
+
+.selector-subtext {
+  font-size: 0.85rem;
+  color: #888888;
+  margin-bottom: 12px;
+}
+
+.product-picker-row {
+  display: grid;
+  grid-template-columns: 1fr 90px 110px;
+  gap: 12px;
+}
+
+.custom-picker-select,
+.custom-picker-qty {
+  background-color: #1a1a1e;
+  border: 1px solid #333338;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #ffffff;
+  font-size: 0.92rem;
+}
+
+.custom-picker-select:focus,
+.custom-picker-qty:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.add-item-btn {
+  height: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group textarea {
+  width: 100%;
+  background-color: #1a1a1e;
+  border: 1px solid #333338;
+  border-radius: 6px;
+  padding: 12px 15px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e50914;
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.3);
+}
+
+@media (max-width: 768px) {
+  .direct-contact-bar {
+    grid-template-columns: 1fr;
+  }
+  .product-picker-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   BOTÕES DE REDES SOCIAIS COMPactos (RODAPÉ)
+========================================================= */
+.footer-social-badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-badge-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffffff;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.footer-badge-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.footer-badge-whatsapp {
+  background-color: #25d366;
+}
+
+.footer-badge-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
