@@ -49,8 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- MÁSCARAS E VALIDAÇÕES DO CADASTRO ---
-  const registerForm = document.getElementById('registerForm');
+  // --- MÁSCARAS DE CNPJ E TELEFONE (CADASTRO E CONTATO) ---
   const cnpjInput = document.getElementById('cnpj');
   const telefoneInput = document.getElementById('telefone');
 
@@ -87,6 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- VALIDAÇÃO DO FORMULÁRIO DE CADASTRO ---
+  const registerForm = document.getElementById('registerForm');
   if (registerForm) {
     registerForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -128,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- PÁGINA DE PRODUTOS DINÂMICA (CARROSSEL E CORES SINCRONIZADAS) ---
+  // --- PÁGINA DE PRODUTOS DINÂMICA (CARROSSEL, CORES E DESCRIÇÕES COMPLETAS) ---
   const productTitleEl = document.getElementById('productTitle');
   if (productTitleEl) {
     const productsCatalog = {
@@ -136,27 +137,29 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'dual-matte',
         title: 'Sleeves Dual Matte Kirigan c/100 unidades',
         shortTitle: 'Dual Matte Sleeves',
-        price: 'R$ 44,57',
-        mainThumb: 'src/images/Eitqueta Kirigan Shiro White FP.jpg',
+        mainThumb: 'src/images/Dual Matte/Leque de cores.png',
         images: [
-          'src/images/Eitqueta Kirigan Shiro White FP.jpg',
-          'src/images/Sleeve Kirigan Matsu Kage Black FP.jpg',
-          'src/images/Sleeve Kirigan Matsu Akai Red FP.jpg',
-          'src/images/Sleeve Kirigan Matsu Yami Purple FP.jpg',
-          'src/images/Sleeve Kirigan Matsu Green FP.jpg',
-          'src/images/Sleeve Kirigan Matsu Sora Blue FP.jpg',
-          'src/images/LY Kirigan Etiqueta Shogun Gold FP.jpg',
-          'src/images/Sleeve Kirigan Matsu Katana Silver FP.jpg'
+          'src/images/Dual Matte/Leque de cores.png',
+          'src/images/Dual Matte/Dual Matte.png',
+          'src/images/Dual Matte/Camadas.jpg',
+          'src/images/Dual Matte/Eitqueta Kirigan Shiro White FP.jpg',
+          'src/images/Dual Matte/Sleeve Kirigan Matsu Kage Black FP.jpg',
+          'src/images/Dual Matte/Sleeve Kirigan Matsu Akai Red FP.jpg',
+          'src/images/Dual Matte/Sleeve Kirigan Matsu Yami Purple FP.jpg',
+          'src/images/Dual Matte/Sleeve Kirigan Matsu Green FP.jpg',
+          'src/images/Dual Matte/Sleeve Kirigan Matsu Sora Blue FP.jpg',
+          'src/images/Dual Matte/LY Kirigan Etiqueta Shogun Gold FP.jpg',
+          'src/images/Dual Matte/Sleeve Kirigan Matsu Katana Silver FP.jpg'
         ],
         colors: [
-          { name: 'Shiro White', hex: '#e5e5e5', imgIndex: 0 },
-          { name: 'Kage Black', hex: '#1c1c1c', imgIndex: 1 },
-          { name: 'Matsu Akai Red', hex: '#8b1e24', imgIndex: 2 },
-          { name: 'Yami Purple', hex: '#6a2c91', imgIndex: 3 },
-          { name: 'Matsu Green', hex: '#147a55', imgIndex: 4 },
-          { name: 'Sora Blue', hex: '#00b4d8', imgIndex: 5 },
-          { name: 'Shogun Gold', hex: '#c9a227', imgIndex: 6 },
-          { name: 'Katana Silver', hex: '#b0b0b0', imgIndex: 7 }
+          { name: 'Shiro White', hex: '#e5e5e5', imgIndex: 4 },
+          { name: 'Kage Black', hex: '#1c1c1c', imgIndex: 5 },
+          { name: 'Matsu Akai Red', hex: '#8b1e24', imgIndex: 6 },
+          { name: 'Yami Purple', hex: '#6a2c91', imgIndex: 7 },
+          { name: 'Matsu Green', hex: '#147a55', imgIndex: 8 },
+          { name: 'Sora Blue', hex: '#00b4d8', imgIndex: 9 },
+          { name: 'Shogun Gold', hex: '#c9a227', imgIndex: 10 },
+          { name: 'Katana Silver', hex: '#b0b0b0', imgIndex: 11 }
         ],
         descriptionHTML: `
           <h3>PROTEÇÃO FORJADA PARA GRANDES BATALHAS</h3>
@@ -192,7 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'perfect-fit',
         title: 'Perfect Fit Kirigan c/100 unidades',
         shortTitle: 'Perfect Fit',
-        price: 'R$ 22,00',
         mainThumb: 'src/images/Perfect fit.png',
         images: [
           'src/images/Perfect fit.png',
@@ -201,30 +203,33 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         colors: [],
         descriptionHTML: `
-          <h3>CAMADA INTERNA CIRÚRGICA DE ALTA PRECISÃO</h3>
-          <p>Projetados para envolver cada carta como uma segunda pele invisível, os <strong>Perfect Fit Kirigan</strong> oferecem ajuste milimétrico para sistemas de <em>Double Sleeving</em>, protegendo contra umidade, poeira e atrito interno.</p>
-          
-          <h3>POR QUE ESCOLHER O PERFECT FIT KIRIGAN?</h3>
+          <h3>PROTEÇÃO FORJADA PARA GRANDES BATALHAS</h3>
+          <p>Como uma lâmina forjada para resistir, seus cards merecem uma proteção à altura. Desenvolvidos para jogadores e colecionadores exigentes. Com engenharia de ponta global e proteção superior, os <strong>Sleeves Perfect Fit Kirigan</strong> entregam o ajuste milimétrico ideal, blindando suas cartas contra poeira, umidade e o desgaste interno antes mesmo de entrarem no sleeve principal.</p>
+
+          <h3>POR QUE O PERFECT FIT KIRIGAN É DIFERENTE?</h3>
           <ul>
-            <li><strong>Ajuste Milimétrico (64x89mm)</strong><br>Desenvolvido para deslizar suavemente para dentro de qualquer sleeve Standard Size sem criar bolhas de ar excessivas ou deformar o card.</li>
-            <li><strong>Transparência Cristalina de Alta Definição</strong><br>Preserva o brilho original de cartas <em>Foil</em> e artes especiais sem distorção de cor.</li>
-            <li><strong>100% Livre de PVC e Ácidos</strong><br>Polipropileno de grau arquivístico seguro para armazenamento de longo prazo.</li>
+            <li><strong>Ajuste Inteligente de 64,5 x 89,5 mm</strong><br>Enquanto a maioria dos modelos tradicionais do mercado utiliza 64 mm de largura — o que costuma esmagar ou dificultar o encaixe de cartas mais grossas (como <em>foils</em> especiais ou de jogos com maior gramatura) —, nossa medida de 64,5 mm foi projetada sob medida para acomodar cartas espessas com precisão, sem folgar nas cartas comuns.</li>
+            <li><strong>Espessura Superior de 100 Microns</strong><br>Com 100 microns de densidade, oferece uma proteção consideravelmente acima dos <em>perfect fit</em> comuns do mercado, garantindo rigidez, durabilidade e uma barreira impenetrável.</li>
+            <li><strong>Soldagem Ultrassônica de Alta Resistência</strong><br>Bordas seladas por ultrassom de alta intensidade, criando uma estrutura coesa que suporta a pressão constante de inserções e manuseios sem abrir ou esgarçar.</li>
+            <li><strong>Engenharia de Camada Interna Ultra-Transparente</strong><br>Filme de alta claridade que garante visibilidade absoluta da arte e dos detalhes da carta, sem distorções visuais ou perda de brilho.</li>
+            <li><strong>100% Livre de PVC e Ácidos</strong><br>Materiais de grau arquivístico que protegem a integridade das cartas a longo prazo, evitando reações químicas, amarelamento ou danos ao seu acervo.</li>
           </ul>
 
           <h3>ESPECIFICAÇÕES TÉCNICAS</h3>
           <ul>
-            <li><strong>Quantidade por Pacote:</strong> 100 Inner Sleeves.</li>
-            <li><strong>Tamanho:</strong> 64x89mm (Standard Inner Size).</li>
-            <li><strong>Espessura:</strong> 60µm de alta flexibilidade e resistência.</li>
-            <li><strong>Material:</strong> 100% Polipropileno (PP) Virgem Transparente.</li>
+            <li><strong>Quantidade por Caixa:</strong> 100 Sleeves por embalagem.</li>
+            <li><strong>Tamanho:</strong> Inner Size / Perfect Fit (64,5 x 89,5 mm) — Desenvolvido para proteção interna (<em>Double-Sleeve</em>) em <em>Magic: The Gathering, Pokémon TCG, Lorcana, One Piece TCG</em> e outros.</li>
+            <li><strong>Espessura:</strong> 100 µm de alta densidade.</li>
+            <li><strong>Material:</strong> 100% Polipropileno (PP) Virgem de Alta Claridade.</li>
+            <li><strong>Proteção:</strong> Barreira total contra poeira, umidade e atrito interno.</li>
           </ul>
+          <p><strong>Guarde seu deck. Domine o campo de batalha.</strong></p>
         `
       },
       'outer-sleeves': {
         id: 'outer-sleeves',
         title: 'Outer Sleeves Kirigan c/100 unidades',
         shortTitle: 'Outer Sleeves',
-        price: 'R$ 29,90',
         mainThumb: 'src/images/Outer Sleeve.png',
         images: [
           'src/images/Outer Sleeve.png',
@@ -233,22 +238,28 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         colors: [],
         descriptionHTML: `
-          <h3>ESCUDO EXTERNO REFORÇADO PARA TORNEIOS</h3>
-          <p>Criados para proteger sleeves ilustrados, edições limitadas e decks competitivos submetidos a horas intensas de jogo, os <strong>Outer Sleeves Kirigan</strong> funcionam como uma armadura externa de alta durabilidade.</p>
-          
-          <h3>DIFERENCIAIS DE ENGENHARIA</h3>
+          <h3>PROTEÇÃO EXTERNA BLINDADA PARA O SEU DECK</h3>
+          <p>A camada final de defesa para baralhos que exigem o nível máximo de segurança. Desenvolvidos especificamente para revestir baralhos que já utilizam o sistema de proteção dupla (Inner Sleeve + Standard Sleeve), os <strong>Sleeves Outer Kirigan</strong> garantem o encaixe perfeito sem folgas excessivas, blindando suas cartas contra poeira, umidade, líquidos e o desgaste severo de campeonatos de alto nível.</p>
+
+          <h3>POR QUE O OUTER SLEEVE KIRIGAN É DIFERENTE?</h3>
           <ul>
-            <li><strong>Proteção Externa para Art Sleeves</strong><br>Evita o descascamento, arranhões e desgaste nas bordas dos seus sleeves principais.</li>
-            <li><strong>Soldagem Ultrassônica Reforçada</strong><br>Construção estrutural projetada para suportar embaralhamentos contínuos sem rasgar.</li>
-            <li><strong>100% Livre de PVC e Ácidos</strong><br>Transparência óptica superior que mantém a nitidez das artes do verso.</li>
+            <li><strong>Dimensão Exata de 69 x 94,2 mm</strong><br>Projetados milimetricamente no tamanho ideal para sobreposição (<em>outer size</em>), vestindo perfeitamente o seu deck principal sem sobras incômodas de plástico, mantendo a firmeza e o manuseio impecáveis.</li>
+            <li><strong>Espessura Superior de 230 Microns</strong><br>Com 230 microns de alta densidade, oferecem uma rigidez e proteção consideravelmente acima dos protetores externos comuns do mercado, criando uma verdadeira armadura contra rasgos e amassados.</li>
+            <li><strong>Traseira Texturizada para Shuffle Feel Superior</strong><br>Verso com acabamento texturizado tridimensional de toque suave, desenvolvido para eliminar o deslize indesejado e proporcionar um embaralhamento (<em>shuffle</em>) incrivelmente fluido, macio e preciso na mesa.</li>
+            <li><strong>Soldagem Ultrassônica de Alta Resistência</strong><br>Bordas seladas por ultrassom de alta intensidade, criando uma estrutura coesa que suporta a pressão constante de embaralhamentos intensos sem abrir ou esgarçar.</li>
+            <li><strong>Transparência Cristalina de Alta Definição</strong><br>Filme frontal com claridade impecável que assegura visibilidade total da arte dos sleeves internos e das cartas, sem nenhum efeito embaçado.</li>
+            <li><strong>100% Livre de PVC e Ácidos</strong><br>Materiais de grau arquivístico que protegem a integridade das cartas a longo prazo, evitando reações químicas, amarelamento ou danos ao seu acervo.</li>
           </ul>
 
           <h3>ESPECIFICAÇÕES TÉCNICAS</h3>
           <ul>
-            <li><strong>Quantidade por Embalagem:</strong> 100 Outer Sleeves.</li>
-            <li><strong>Tamanho:</strong> 69x94mm (Oversized / Triple Sleeve).</li>
-            <li><strong>Material:</strong> 100% Polipropileno (PP) Virgem.</li>
+            <li><strong>Quantidade por Caixa:</strong> 100 Sleeves por embalagem.</li>
+            <li><strong>Tamanho:</strong> Outer Size / Protetor Externo (69 x 94,2 mm) — Desenvolvido para revestir baralhos já protegidos com Standard Sleeves em <em>Magic: The Gathering, Pokémon TCG, Lorcana, One Piece TCG</em> e outros.</li>
+            <li><strong>Espessura:</strong> 230 µm de alta densidade.</li>
+            <li><strong>Material:</strong> 100% Polipropileno (PP) Virgem de Alta Resistência.</li>
+            <li><strong>Proteção:</strong> Barreira externa total contra líquidos, poeira, sujeira e atrito severo.</li>
           </ul>
+          <p><strong>Guarde seu deck. Domine o campo de batalha.</strong></p>
         `
       }
     };
@@ -261,18 +272,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.title = `KIRIGAN - ${currentProduct.shortTitle}`;
     productTitleEl.textContent = currentProduct.title;
-    document.getElementById('productPrice').textContent = currentProduct.price;
     document.getElementById('productDescriptionContent').innerHTML = currentProduct.descriptionHTML;
 
-    // Atualiza link do botão "Fazer orçamento" com o produto e a cor selecionada
     const quoteBtn = document.getElementById('quoteBtn');
-    function updateQuoteLink() {
-      if (!quoteBtn) return;
-      const colorText = (currentProduct.colors && currentProduct.colors.length > 0)
-        ? ` - Cor: ${document.getElementById('selectedColorName').textContent}`
-        : '';
-      const assunto = encodeURIComponent(`Orçamento: ${currentProduct.title}${colorText}`);
-      quoteBtn.href = `contato.html?assunto=${assunto}`;
+    if (quoteBtn) {
+      quoteBtn.href = 'contato.html';
     }
 
     const currentIndex = productKeys.indexOf(currentKey);
@@ -306,7 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }
       }
-      updateQuoteLink();
     }
 
     thumbsRowEl.innerHTML = '';
@@ -344,7 +347,6 @@ document.addEventListener('DOMContentLoaded', () => {
           if (typeof color.imgIndex === 'number') {
             updateGalleryImage(color.imgIndex);
           }
-          updateQuoteLink();
         });
         colorSwatchesEl.appendChild(swatch);
       });
@@ -352,9 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
       colorGroupEl.style.display = 'none';
     }
 
-    updateQuoteLink();
-
-    // Mostrar mais / Mostrar menos da Descrição (Em Português)
+    // Mostrar mais / Mostrar menos da Descrição
     const descContentEl = document.getElementById('productDescriptionContent');
     const toggleDescBtn = document.getElementById('toggleDescriptionBtn');
     toggleDescBtn.addEventListener('click', () => {
@@ -362,7 +362,7 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleDescBtn.textContent = isCollapsed ? 'Mostrar mais' : 'Mostrar menos';
     });
 
-    // Produtos Relacionados
+    // Produtos Relacionados (sem preços)
     const relatedGridEl = document.getElementById('relatedProductsGrid');
     relatedGridEl.innerHTML = '';
     productKeys
@@ -377,57 +377,33 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${item.mainThumb}" alt="${item.shortTitle}">
           </div>
           <h4>${item.shortTitle}</h4>
-          <span>${item.price}</span>
         `;
         relatedGridEl.appendChild(cardLink);
       });
   }
-});
 
-// --- PÁGINA DE CONTATO E ORÇAMENTO ---
+  // --- PÁGINA DE CONTATO (DÚVIDAS DA EMPRESA) ---
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    const addProductBtn = document.getElementById('addProductBtn');
-    const productSelect = document.getElementById('productSelect');
-    const productQtyInput = document.getElementById('productQtyInput');
-    const descricaoPedido = document.getElementById('descricaoPedido');
+    const duvidasInput = document.getElementById('duvidas');
 
-    // Se o usuário veio da página de produtos clicando em "Fazer orçamento", captura na URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const assuntoUrl = urlParams.get('assunto');
-    if (assuntoUrl && descricaoPedido) {
-      descricaoPedido.value = decodeURIComponent(assuntoUrl) + '\n';
-    }
-
-    // Botão Adicionar produto na caixa de texto
-    if (addProductBtn && productSelect && productQtyInput && descricaoPedido) {
-      addProductBtn.addEventListener('click', () => {
-        const productName = productSelect.value;
-        const qty = productQtyInput.value;
-        const itemLine = `${qty}x ${productName}\n`;
-
-        if (descricaoPedido.value.trim() === '') {
-          descricaoPedido.value = itemLine;
-        } else {
-          descricaoPedido.value += itemLine;
-        }
-
-        productQtyInput.value = '1';
-      });
-    }
-
-    // Validação e Envio do Pedido
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
       const nome = document.getElementById('nome').value.trim();
+      const cnpjDigits = cnpjInput ? cnpjInput.value.replace(/\D/g, '') : '';
       const email = document.getElementById('email').value.trim();
       const responsavel = document.getElementById('responsavel').value.trim();
-      const telefone = document.getElementById('telefone').value.trim();
-      const descricao = descricaoPedido.value.trim();
+      const telefoneDigits = telefoneInput ? telefoneInput.value.replace(/\D/g, '') : '';
+      const duvidas = duvidasInput ? duvidasInput.value.trim() : '';
 
       if (nome.length < 2) {
-        alert('Por favor, informe seu nome ou razão social.');
+        alert('Por favor, informe a razão social da empresa.');
+        return;
+      }
+
+      if (cnpjDigits.length > 0 && cnpjDigits.length !== 14) {
+        alert('Se informado, o CNPJ deve conter exatamente 14 dígitos numéricos.');
         return;
       }
 
@@ -442,17 +418,18 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      if (telefone.length < 10) {
+      if (telefoneDigits.length < 10 || telefoneDigits.length > 11) {
         alert('Por favor, informe um número de telefone/WhatsApp válido com DDD.');
         return;
       }
 
-      if (descricao.length < 5) {
-        alert('Por favor, adicione pelo menos um produto ou detalhe na descrição do pedido.');
+      if (duvidas.length < 5) {
+        alert('Por favor, escreva a sua dúvida antes de enviar.');
         return;
       }
 
-      alert('Pedido / Orçamento enviado com sucesso! Nossa equipe entrará em contato em breve.');
+      alert('Mensagem enviada com sucesso! Em breve nossa equipe responderá à sua dúvida.');
       contactForm.reset();
     });
   }
+});
